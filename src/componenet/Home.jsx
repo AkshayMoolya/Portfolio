@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-scroll";
-import hero from "../assets/heroImage.png";
+
 import { BiRightArrowAlt } from "react-icons/bi";
 const Home = () => {
   return (
     <div
       name="home"
       id="home"
-      className=" mt-[75px] h-[600px] w-full sm:pt-0 sm:h-[600px] bg-gradient-to-b from-black via-black to-gray-800"
+      className=" mt-[75px] h-[600px] w-full sm:pt-0 sm:h-[600px] bg-gradient-to-b from-black via-black to-gray-900"
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center h-full">

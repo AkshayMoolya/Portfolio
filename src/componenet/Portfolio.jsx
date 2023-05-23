@@ -11,30 +11,34 @@ const Portfolio = () => {
       src: youtube,
       demo: "https://youtube-clone-five-omega.vercel.app/",
       code: "https://github.com/AkshayMoolya/youtube-clone",
+      name: "youtube clone",
     },
     {
       id: 2,
       src: weatherapp,
       demo: "https://weather-app-theta-amber.vercel.app/",
       code: "https://github.com/AkshayMoolya/Weather-app",
+      name: "weather app",
     },
     {
       id: 3,
       src: Moviehub,
       demo: "https://movie-hub-tau.vercel.app/",
       code: "https://github.com/AkshayMoolya/MovieHub",
+      name: "moviehub",
     },
     {
       id: 4,
       src: crypto,
       demo: "https://crypto-tracker-ten-iota.vercel.app/",
       code: "https://github.com/AkshayMoolya/Crypto-tracker",
+      name: "crypto tracker app",
     },
   ];
   return (
     <div
       name="portfolio"
-      className="bg-gradient-to-b  from-black to-gray-800 w-full text-white md:h-screen"
+      className="bg-gradient-to-b  from-black to-gray-900 w-full text-white md:h-screen"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="py-6">
@@ -44,14 +48,16 @@ const Portfolio = () => {
           <p className="py-6 ">Check out some of my work right her</p>
         </div>
         <div className="grid sm:grid-cols-2 md:grid-cols-3  gap-8 px-12 sm:px-0 justify-center ">
-          {portfolio.map(({ id, src, demo, code }) => (
-            <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
+          {portfolio.map(({ id, src, demo, code, name }) => (
+            <div key={id} className="shadow-md shadow-gray-600 rounded-lg ">
               <img
                 src={src}
                 alt=""
                 className="rounded-md duration-300 hover:scale-105 "
               />
-
+              <div className="w-full flex justify-center font-bold capitalize pt-2 ">
+                <span>{name}</span>
+              </div>
               <div className="flex items-center justify-center">
                 <button
                   onClick={() => window.open(`${demo}`, "_blank")}
