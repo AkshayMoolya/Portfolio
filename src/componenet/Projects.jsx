@@ -4,7 +4,7 @@ import weatherapp from "../assets/portfolio/Weather app.png";
 import crypto from "../assets/portfolio/CryptoTracker.png";
 import Moviehub from "../assets/portfolio/MovieHub.png";
 
-const Portfolio = () => {
+const Projects = () => {
   const portfolio = [
     {
       id: 1,
@@ -37,12 +37,12 @@ const Portfolio = () => {
   ];
   return (
     <div
-      name="portfolio"
-      className="bg-gradient-to-b  from-black to-gray-900 w-full text-white md:h-screen"
+      name="Projects"
+      className="bg-black  from-black to-gray-900 w-full text-white min-h-screen"
     >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full min-h-screen">
         <div className="py-6">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
+          <p className="text-4xl font-bold inline border-b-4 border-green-600">
             Projects
           </p>
           <p className="py-6 ">Check out some of my work right her</p>
@@ -50,26 +50,29 @@ const Portfolio = () => {
         <div className="grid sm:grid-cols-2 md:grid-cols-3  gap-8 px-12 sm:px-0 justify-center ">
           {portfolio.map(({ id, src, demo, code, name }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg ">
-              <img
-                src={src}
-                alt=""
-                className="rounded-md duration-300 hover:scale-105 "
-              />
-              <div className="w-full flex justify-center font-bold capitalize pt-2 ">
+              <div className="h-[150px]">
+                <img
+                  src={src}
+                  alt=""
+                  className="rounded-md duration-300  h-full "
+                />
+              </div>
+
+              <div className="w-full flex justify-center font-bold capitalize pt-4">
                 <span>{name}</span>
               </div>
               <div className="flex items-center justify-center">
                 <button
                   onClick={() => window.open(`${demo}`, "_blank")}
-                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
+                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 hover:text-green-600 font-semibold "
                 >
-                  demo
+                  Demo
                 </button>
                 <button
                   onClick={() => window.open(`${code}`, "_blank")}
-                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
+                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 hover:text-green-600 font-semibold "
                 >
-                  code
+                  Github
                 </button>
               </div>
             </div>
@@ -80,4 +83,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Projects;

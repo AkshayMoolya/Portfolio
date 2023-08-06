@@ -5,15 +5,15 @@ const About = () => {
     <div
       name="about"  
       id="about"
-      className="w-full  bg-gradient-to-b from-gray-900 to-black text-white"
+      className="w-full bg-black from-gray-900 to-black text-white"
     >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full ">
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full min-h-screen ">
         <div className="pb-4">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-400">
+          <p className="text-5xl font-bold inline border-b-4 border-green-600">
             About
           </p>
         </div>
-        <p className="text-xl mt-20">
+        <p className="text-xl mt-20 text-gray-400">
           I'm a full-stack web developer with a passion for learning. From
           front-end design using HTML, CSS, and JavaScript to implementing
           complex functionalities with frameworks like React and Node.js, I
@@ -25,7 +25,7 @@ const About = () => {
           needs and business goals.
         </p>
         <br />
-        <p className="text-xl">
+        <p className="text-xl text-gray-400">
           Whether working independently or in a team, I approach problem-solving
           with creativity and attention to detail. I believe in turning ideas
           into functional and elegant web applications that resonate with

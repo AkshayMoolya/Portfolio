@@ -7,20 +7,16 @@ const Navbar = () => {
 
   const Links = [
     {
-      id: 1,
-      link: "home",
-    },
-    {
       id: 2,
       link: "about",
     },
     {
       id: 3,
-      link: "portfolio",
+      link: "Projects",
     },
     {
       id: 4,
-      link: "experience",
+      link: "TechStacks",
     },
     {
       id: 5,
@@ -28,7 +24,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className="flex top-0 justify-between items-center w-full h-20 text-white bg-black px-4 fixed">
+    <div className="flex top-0 justify-between items-center w-full h-20 text-white backdrop-blur-sm bg-neutral-800/50 px-4 fixed">
       <div>
         <h1 className="text-5xl font-signature ml-2 ">Akshay</h1>
       </div>
@@ -36,7 +32,7 @@ const Navbar = () => {
         {Links.map(({ id, link }) => (
           <li
             key={id}
-            className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 hover:text-white duration-200"
+            className="px-4 cursor-pointer capitalize font-bold text-white hover:scale-105 hover:text-green-500 duration-200"
           >
             <Link to={link} spy={true} smooth={true} offset={50} duration={500}>
               {link}
@@ -51,14 +47,14 @@ const Navbar = () => {
           setmenu(!menu);
         }}
       >
-        {menu ? <FaTimes size={30} /> : <FaBars size={30} />}
+        <FaBars size={30} />
       </div>
       {menu && (
-        <ul className="flex flex-col justify-center absolute top-0 right-0 w-[60%] h-[350px] bg-gradient-to-b rounded-bl-lg rounded-tl-lg from-black to-gray-800 text-gray-500 ">
+        <ul className="flex flex-col justify-center  absolute top-20 right-5 w-[35%] h-[150px] rounded-xl border-gray-500 border bg-black text-white rounded-bl-lg rounded-tl-lg  text-gray-500  ">
           {Links.map(({ id, link }) => (
             <li
               key={id}
-              className="px-4 cursor-pointer capitalize py-4 text-2xl hover:text-white duration-300"
+              className="px-2 py-1 text-sm font-semibold cursor-pointer capitalize py-2 text-2xl hover:text-white duration-300"
             >
               <Link
                 to={link}
